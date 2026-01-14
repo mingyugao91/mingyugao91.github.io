@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张三 - 个人主页</title>
+    <style>
+        /* 全局样式重置与基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 容器样式 */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 头部样式 */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        /* 核心内容模块样式 */
+        .section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* 个人信息样式 */
+        .info-item {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .info-item strong {
+            color: #3498db;
+            width: 120px;
+            display: inline-block;
+        }
+
+        /* 技能样式 */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-item {
+            background-color: #e8f4fd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: #2c3e50;
+        }
+
+        /* 项目经历样式 */
+        .project-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+
+        .project-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .project-item p {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        /* 联系方式样式 */
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-item strong {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部：姓名与身份 -->
+        <header>
+            <h1>张三</h1>
+            <p>南京审计大学 | 计算机专业 | 大三学生</p>
+        </header>
+
+        <!-- 个人信息模块 -->
+        <section class="section">
+            <h2>个人信息</h2>
+            <div class="info-item">
+                <strong>出生日期：</strong>2004年6月
+            </div>
+            <div class="info-item">
+                <strong>籍贯：</strong>江苏省南京市
+            </div>
+            <div class="info-item">
+                <strong>电子邮箱：</strong>zhangsan@example.com
+            </div>
+            <div class="info-item">
+                <strong>GitHub：</strong><a href="https://github.com/zhangsan" target="_blank">github.com/zhangsan</a>
+            </div>
+            <div class="info-item">
+                <strong>专业方向：</strong>软件开发、数据分析
+            </div>
+        </section>
+
+        <!-- 教育背景模块 -->
+        <section class="section">
+            <h2>教育背景</h2>
+            <div class="info-item">
+                <strong>就读院校：</strong>南京审计大学
+            </div>
+            <div class="info-item">
+                <strong>所学专业：</strong>计算机科学与技术
+            </div>
+            <div class="info-item">
+                <strong>入学时间：</strong>2022年9月 | 预计毕业：2026年6月
+            </div>
+            <div class="info-item">
+                <strong>核心课程：</strong>数据结构、算法分析、Python编程、数据库原理、计算机网络、面向对象程序设计
+            </div>
+            <div class="info-item">
+                <strong>学业情况：</strong>GPA 3.5/4.0，专业前15%，获校级二等奖学金1次
+            </div>
+        </section>
+
+        <!-- 专业技能模块 -->
+        <section class="section">
+            <h2>专业技能</h2>
+            <div class="skills">
+                <div class="skill-item">Python 熟练</div>
+                <div class="skill-item">Java 掌握</div>
+                <div class="skill-item">SQL (MySQL) 掌握</div>
+                <div class="skill-item">HTML/CSS/JavaScript 基础</div>
+                <div class="skill-item">数据分析 (Pandas/Numpy)</div>
+                <div class="skill-item">Git 版本控制</div>
+                <div class="skill-item">Linux 基础操作</div>
+                <div class="skill-item">数据结构与算法</div>
+            </div>
+        </section>
+
+        <!-- 项目经历模块（贴合学生身份） -->
+        <section class="section">
+            <h2>项目经历</h2>
+            <div class="project-item">
+                <h3>学生成绩管理系统 | 2024.03-2024.05</h3>
+                <p><strong>技术栈：</strong>Python + MySQL + Tkinter</p>
+                <p><strong>项目描述：</strong>课程设计项目，实现学生信息、成绩的增删改查，支持成绩统计分析与Excel导出，解决课程作业中手动统计成绩的效率问题。</p>
+                <p><strong>个人职责：</strong>负责数据库设计、核心业务逻辑编写及界面开发，独立完成80%以上代码编写。</p>
+            </div>
+            <div class="project-item">
+                <h3>个人博客网站（静态） | 2024.09-至今</h3>
+                <p><strong>技术栈：</strong>HTML + CSS + JavaScript + GitHub Pages</p>
+                <p><strong>项目描述：</strong>基于GitHub Pages搭建的个人技术博客，用于记录学习笔记、编程心得，包含文章分类、标签检索等基础功能。</p>
+                <p><strong>个人职责：</strong>独立完成页面布局、样式设计及交互逻辑开发，实现响应式适配。</p>
+            </div>
+        </section>
+
+        <!-- 联系方式模块 -->
+        <section class="section contact">
+            <h2>联系方式</h2>
+            <a href="mailto:zhangsan@example.com">邮箱</a>
+            <a href="https://github.com/zhangsan" target="_blank">GitHub</a>
+            <a href="https://gitee.com/zhangsan" target="_blank">Gitee（可选）</a>
+        </section>
+    </div>
+</body>
+</html>
