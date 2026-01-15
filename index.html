@@ -20,7 +20,7 @@
         }
 
         /* 容器样式 */
-        。container {
+        .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
@@ -65,7 +65,7 @@
         }
 
         /* 个人信息样式 */
-        。info-item {
+        .info-item {
             margin-bottom: 15px;
             font-size: 1.05rem;
         }
@@ -108,8 +108,24 @@
             margin-bottom: 8px;
         }
 
+        /* 新增：竞赛荣誉样式（和项目经历风格统一，保持视觉一致） */
+        .honor-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .honor-item::before {
+            content: "•";
+            color: #3498db;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
         /* 联系方式样式 */
-        。contact {
+        .contact {
             text-align: center;
         }
 
@@ -147,8 +163,12 @@
 </head>
 <body>
     <div class="container">
-        <!-- 头部：姓名与身份 -->
+        <!-- 头部：姓名与身份（改用a标签嵌套img的方式） -->
         <header>
+            <!-- 核心修改：a标签嵌套img，行内设置尺寸和样式，点击跳转到GitHub -->
+            <a href="https://github.com/mingyugao91" target="_blank">
+                <img src="gmy.jpg" alt="高铭宇的个人照片" width="150px" height="150px" style="border-radius: 50%; border: 4px solid #e8f4fd; object-fit: cover; margin-bottom: 20px;" />&nbsp;
+            </a>
             <h1>高铭宇</h1>
             <p>南京审计大学 | 计算机专业 | 大三学生</p>
         </header>
@@ -157,19 +177,22 @@
         <section class="section">
             <h2>个人信息</h2>
             <div class="info-item">
-                <strong>出生日期：</strong>2004年6月
+                <strong>出生日期：</strong>2005年3月
             </div>
             <div class="info-item">
-                <strong>籍贯：</strong>江苏省南京市
+                <strong>籍贯：</strong>江苏省常州市
             </div>
             <div class="info-item">
-                <strong>电子邮箱：</strong>zhangsan@example.com
+                <strong>政治面貌：</strong>预备党员
             </div>
             <div class="info-item">
-                <strong>GitHub：</strong><a href="https://github.com/zhangsan" target="_blank">github.com/zhangsan</a>
+                <strong>电子邮箱：</strong>2102054085@qq.com
             </div>
             <div class="info-item">
-                <strong>专业方向：</strong>软件开发、数据分析
+                <strong>GitHub：</strong><a href="https://github.com/mingyugao91" target="_blank">github.com/mingyugao91</a>
+            </div>
+            <div class="info-item">
+                <strong>专业方向：</strong>系统开发、智能审计
             </div>
         </section>
 
@@ -186,7 +209,7 @@
                 <strong>入学时间：</strong>2023年9月 | 预计毕业：2027年6月
             </div>
             <div class="info-item">
-                <strong>核心课程：</strong>数据结构、算法分析、Python编程、数据库原理、计算机网络、面向对象程序设计
+                <strong>核心课程：</strong>数据结构、算法设计、Python编程、数据库原理、计算机网络、计算机组成原理
             </div>
             <div class="info-item">
                 <strong>学业情况：</strong>GPA 3.7/5.0，专业前15%，获校级二等奖学金1次
@@ -225,14 +248,33 @@
             </div>
         </section>
 
+        <!-- 新增：竞赛荣誉模块 -->
+        <section class="section">
+            <h2>竞赛荣誉</h2>
+            <div class="honor-item">2024年11月 获南京马拉松优秀志愿者</div>
+            <div class="honor-item">2025年4月 获南京审计大学数学竞赛三等奖</div>
+            <div class="honor-item">2025年4月 获2024年度南京审计大学优秀共青团员</div>
+            <div class="honor-item">2025年5月 获南京审计大学数学建模竞赛二等奖</div>
+            <div class="honor-item">2025年5月 获五一数学建模三等奖</div>
+            <div class="honor-item">2025年5月 获蓝桥杯全国软件和信息技术专业人才大赛C/C++江苏省三等奖</div>
+            <div class="honor-item">2025年5月 软件著作权（第一著作权人）</div>
+            <div class="honor-item">2025年6月 获南京审计大学第十二届“挑战杯”大学生课外学术科技作品竞赛校三等奖</div>
+            <div class="honor-item">2025年7月 获数维杯大学生数学建模挑战赛三等奖</div>
+            <div class="honor-item">2025年8月 获华数杯全国大学生数学建模竞赛二等奖</div>
+            <div class="honor-item">2025年9月 获中国国际大学生创新大赛校一等奖</div>
+            <div class="honor-item">2025年11月 获得计算机三级证书</div>
+            <div class="honor-item">2025年11月 获iCAN大学生创新创业大赛江浙赛区比赛三等奖</div>
+            <div class="honor-item">2025年11月 获南京审计大学“三好学生”</div>
+            <div class="honor-item">2025年11月 获优秀学生综合奖学金二等奖</div>
+            <div class="honor-item">to be continued...</div>
+        </section>
+
         <!-- 联系方式模块 -->
         <section class="section contact">
             <h2>联系方式</h2>
-            <a href="mailto:zhangsan@example.com">邮箱</a>
-            <a href="https://github.com/zhangsan" target="_blank">GitHub</a>
-            <a href="https://gitee.com/zhangsan" target="_blank">Gitee（可选）</a>
+            <a href="mailto:2102054085@qq.com">邮箱</a>
+            <a href="https://github.com/mingyugao91" target="_blank">GitHub</a>
         </section>
     </div>
 </body>
-
 </html>
